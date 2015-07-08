@@ -8,6 +8,7 @@
 *.toc
 *.log
 *.swp
+*.sqlite3
 data
 logs
 summary
