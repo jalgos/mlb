@@ -1,0 +1,261 @@
+src:  sqlite 3.8.6 [pitchRx.sqlite3]
+tbls: action, atbat, pa_full, pitch, po, runner
+Source: sqlite 3.8.6 [pitchRx.sqlite3]
+From: pa_full [2,598,380 x 81]
+
+               des des_es id type tfs tfs_zulu     x      y sv_id
+1    Called Strike     NA  3    S              88.41 122.61    NA
+2    Called Strike     NA  4    S              93.56 115.70    NA
+3    Called Strike     NA  5    S              98.71 121.75    NA
+4  In play, out(s)     NA  9    X              93.56 126.06    NA
+5  Swinging Strike     NA 13    S              90.13 127.79    NA
+6  Swinging Strike     NA 14    S              97.85 113.11    NA
+7  Swinging Strike     NA 15    S              96.14 118.29    NA
+8  In play, out(s)     NA 20    X              99.57 107.07    NA
+9  In play, out(s)     NA 24    X              90.99 137.29    NA
+10 In play, out(s)     NA 28    X              91.85 120.88    NA
+..             ...    ... ..  ... ...      ...   ...    ...   ...
+Variables not shown: start_speed (dbl), end_speed (dbl), sz_top
+  (dbl), sz_bot (dbl), pfx_x (dbl), pfx_z (dbl), px (dbl), pz
+  (dbl), x0 (dbl), y0 (dbl), z0 (dbl), vx0 (dbl), vy0 (dbl), vz0
+  (dbl), ax (dbl), ay (dbl), az (dbl), break_y (dbl), break_angle
+  (dbl), break_length (dbl), pitch_type (chr), type_confidence
+  (dbl), zone (dbl), nasty (dbl), spin_dir (dbl), spin_rate (dbl),
+  cc (chr), mt (chr), url.x (chr), inning_side.x (chr), inning.x
+  (dbl), next_.x (chr), num (dbl), on_1b (dbl), on_2b (dbl), on_3b
+  (dbl), count (chr), gameday_link (chr), event_num.x (chr),
+  play_guid.x (chr), pitcher (dbl), batter (dbl), b (dbl), s
+  (dbl), o (dbl), start_tfs (chr), start_tfs_zulu (chr), stand
+  (chr), b_height (chr), p_throws (chr), atbat_des (chr),
+  atbat_des_es (chr), event (chr), score (chr), home_team_runs
+  (chr), away_team_runs (chr), url.y (chr), inning_side.y (chr),
+  inning.y (dbl), next_.y (chr), event2 (chr), event3 (chr),
+  batter_name (chr), pitcher_name (chr), event4 (chr), date (chr),
+  event_num.y (chr), event_es (chr), event2_es (chr), event3_es
+  (chr), event4_es (chr), play_guid.y (chr)
+[1] 2598380      81
+
+The downloaded binary packages are in
+	/var/folders/dy/nql8_yws5tzdkxm5ygzxp4zr0000gn/T//RtmpY5mqgO/downloaded_packages
+RStudioGD 
+        2 
+RStudioGD 
+        2 
+RStudioGD 
+        2 
+RStudioGD 
+        2 
+RStudioGD 
+        2 
+RStudioGD 
+        2 
+RStudioGD 
+        2 
+RStudioGD 
+        2 
+RStudioGD 
+        2 
+RStudioGD 
+        2 
+RStudioGD 
+        2 
+RStudioGD 
+        2 
+RStudioGD 
+        2 
+RStudioGD 
+        2 
+RStudioGD 
+        2 
+RStudioGD 
+        2 
+RStudioGD 
+        2 
+RStudioGD 
+        2 
+RStudioGD 
+        2 
+src:  sqlite 3.8.6 [pitchRx.sqlite3]
+tbls: action, atbat, pa_full, pitch, po, runner
+Source: local data frame [2,598,380 x 81]
+
+               des des_es id type tfs tfs_zulu     x      y sv_id
+1    Called Strike     NA  3    S              88.41 122.61    NA
+2    Called Strike     NA  4    S              93.56 115.70    NA
+3    Called Strike     NA  5    S              98.71 121.75    NA
+4  In play, out(s)     NA  9    X              93.56 126.06    NA
+5  Swinging Strike     NA 13    S              90.13 127.79    NA
+6  Swinging Strike     NA 14    S              97.85 113.11    NA
+7  Swinging Strike     NA 15    S              96.14 118.29    NA
+8  In play, out(s)     NA 20    X              99.57 107.07    NA
+9  In play, out(s)     NA 24    X              90.99 137.29    NA
+10 In play, out(s)     NA 28    X              91.85 120.88    NA
+..             ...    ... ..  ... ...      ...   ...    ...   ...
+Variables not shown: start_speed (dbl), end_speed (dbl), sz_top
+  (dbl), sz_bot (dbl), pfx_x (dbl), pfx_z (dbl), px (dbl), pz
+  (dbl), x0 (dbl), y0 (dbl), z0 (dbl), vx0 (dbl), vy0 (dbl), vz0
+  (dbl), ax (dbl), ay (dbl), az (dbl), break_y (dbl), break_angle
+  (dbl), break_length (dbl), pitch_type (chr), type_confidence
+  (dbl), zone (dbl), nasty (dbl), spin_dir (dbl), spin_rate (dbl),
+  cc (chr), mt (chr), url.x (chr), inning_side.x (chr), inning.x
+  (dbl), next_.x (chr), num (dbl), on_1b (dbl), on_2b (dbl), on_3b
+  (dbl), count (chr), gameday_link (chr), event_num.x (chr),
+  play_guid.x (chr), pitcher (dbl), batter (dbl), b (dbl), s
+  (dbl), o (dbl), start_tfs (chr), start_tfs_zulu (chr), stand
+  (chr), b_height (chr), p_throws (chr), atbat_des (chr),
+  atbat_des_es (chr), event (chr), score (chr), home_team_runs
+  (chr), away_team_runs (chr), url.y (chr), inning_side.y (chr),
+  inning.y (dbl), next_.y (chr), event2 (chr), event3 (chr),
+  batter_name (chr), pitcher_name (chr), event4 (chr), date (chr),
+  event_num.y (chr), event_es (chr), event2_es (chr), event3_es
+  (chr), event4_es (chr), play_guid.y (chr)
+Error in View : object 'gameday_link' not found
+src:  sqlite 3.8.6 [pitchRx.sqlite3]
+tbls: action, atbat, pa_full, pitch, po, runner
+<SQLiteResult>
+Source: sqlite 3.8.6 [pitchRx.sqlite3]
+From: pa_full [730,082 x 81]
+Filter: date >= "2013_01_01" & date <= "2014_01_01" 
+
+               des            des_es id type    tfs
+1  In play, out(s)  En juego, out(s)  3    X 201207
+2  In play, no out  En juego, no out  7    X 201307
+3    Called Strike    Strike cantado 11    S 201550
+4             Foul              Foul 12    S 201553
+5  Swinging Strike Strike tirÃ¡ndole 13    S 201555
+6  In play, out(s)  En juego, out(s) 17    X 201853
+7  In play, out(s)  En juego, out(s) 23    X 202200
+8  Swinging Strike Strike tirÃ¡ndole 27    S 202426
+9         Foul Tip       Foul atrÃ¡s 28    S 202427
+10 Swinging Strike Strike tirÃ¡ndole 29    S 202430
+..             ...               ... ..  ...    ...
+Variables not shown: tfs_zulu (chr), x (dbl), y (dbl), sv_id
+  (chr), start_speed (dbl), end_speed (dbl), sz_top (dbl), sz_bot
+  (dbl), pfx_x (dbl), pfx_z (dbl), px (dbl), pz (dbl), x0 (dbl),
+  y0 (dbl), z0 (dbl), vx0 (dbl), vy0 (dbl), vz0 (dbl), ax (dbl),
+  ay (dbl), az (dbl), break_y (dbl), break_angle (dbl),
+  break_length (dbl), pitch_type (chr), type_confidence (dbl),
+  zone (dbl), nasty (dbl), spin_dir (dbl), spin_rate (dbl), cc
+  (chr), mt (chr), url.x (chr), inning_side.x (chr), inning.x
+  (dbl), next_.x (chr), num (dbl), on_1b (dbl), on_2b (dbl), on_3b
+  (dbl), count (chr), gameday_link (chr), event_num.x (chr),
+  play_guid.x (chr), pitcher (dbl), batter (dbl), b (dbl), s
+  (dbl), o (dbl), start_tfs (chr), start_tfs_zulu (chr), stand
+  (chr), b_height (chr), p_throws (chr), atbat_des (chr),
+  atbat_des_es (chr), event (chr), score (chr), home_team_runs
+  (chr), away_team_runs (chr), url.y (chr), inning_side.y (chr),
+  inning.y (dbl), next_.y (chr), event2 (chr), event3 (chr),
+  batter_name (chr), pitcher_name (chr), event4 (chr), date (chr),
+  event_num.y (chr), event_es (chr), event2_es (chr), event3_es
+  (chr), event4_es (chr), play_guid.y (chr)
+
+The downloaded binary packages are in
+	/var/folders/dy/nql8_yws5tzdkxm5ygzxp4zr0000gn/T//RtmpY5mqgO/downloaded_packages
+function (data, color = "pitch_types", avg.by, point.alpha = 1/3, 
+    limitz = c(-3.5, 3.5, 0, 7), flag = FALSE, interval = 0.01, 
+    layer = list(), parent = FALSE, ...) 
+{
+    top = bottom = right = left = NULL
+    if ("pitch_type" %in% names(data)) {
+        data$pitch_type <- factor(data$pitch_type)
+        pitch.type <- c("SI", "FF", "IN", "SL", "CU", "CH", "FT", 
+            "FC", "PO", "KN", "FS", "FA", NA, "FO")
+        pitch.types <- c("Sinker", "Fastball (four-seam)", "Intentional Walk", 
+            "Slider", "Curveball", "Changeup", "Fastball (two-seam)", 
+            "Fastball (cutter)", "Pitchout", "Knuckleball", "Fastball (split-finger)", 
+            "Fastball", "Unknown", "Forkball")
+        types <- data.frame(pitch_type = factor(pitch.type, levels = sort(pitch.type)), 
+            pitch_types = factor(pitch.types, levels = sort(pitch.types)))
+        data <- plyr::join(data, types, by = "pitch_type", type = "inner")
+    }
+    if (!"b_height" %in% names(data)) {
+        warning("pitchRx assumes the height of each batter is recorded as 'b_height'. Since there is no such column, we will assume each batter has a height of 6'2''")
+        data$b_height <- "6-2"
+    }
+    if (!color %in% names(data)) {
+        warning(paste(color, "is the variable that defines coloring but it isn't in the dataset!"))
+        color <- ""
+    }
+    layers <- NULL
+    if (parent) {
+        for (i in layer) layers <- list(layers, eval(i))
+    }
+    else {
+        layers <- layer
+    }
+    facets <- getFacets(layers)
+    idx <- c("x0", "y0", "z0", "vx0", "vy0", "vz0", "ax", "ay", 
+        "az")
+    if (!all(idx %in% names(data))) 
+        warning("You must have the following variables in your dataset to animate pitch locations: 'x0', 'y0', 'z0', 'vx0', 'vy0', 'vz0', 'ax', 'ay', 'az'")
+    for (i in idx) data[, i] <- as.numeric(data[, i])
+    complete <- data[complete.cases(data[, idx]), ]
+    color.exists <- isTRUE(color %in% c(names(data), "pitch_types"))
+    if (!missing(avg.by)) {
+        index <- c(facets, avg.by)
+        reordered <- plyr::ddply(complete, index, numcolwise(mean))
+        if (color.exists) {
+            if (avg.by != color) {
+                warning("You can't average by one variable and color by another!")
+                aes_mapping <- aes_string(x = "x", y = "z", size = "scale_y")
+            }
+            else {
+                aes_mapping <- aes_string(x = "x", y = "z", size = "scale_y", 
+                  colour = color)
+            }
+        }
+    }
+    else {
+        if (color.exists) {
+            reordered <- plyr::ddply(complete, facets, function(x) {
+                x[, color] <- reorder(x[, color], x[, color], 
+                  length)
+                x[rev(order(x[, color])), ]
+            })
+            if (is.factor(reordered[, color])) 
+                reordered[color] <- factor(reordered[, color], 
+                  levels = levels(data[, color]))
+            aes_mapping <- aes_string(x = "x", y = "z", size = "scale_y", 
+                colour = color)
+        }
+        else {
+            reordered <- complete
+            aes_mapping <- aes_string(x = "x", y = "z", size = "scale_y")
+        }
+    }
+    parameters <- reordered[, names(reordered) %in% idx]
+    snapshots <- getSnapshots(parameters, interval)
+    other <- reordered[, !(names(reordered) %in% idx)]
+    boundaries <- getStrikezones(data, facets, strikeFX = FALSE)
+    joinby <- unique(c("stand", facets))
+    other <- plyr::join(other, boundaries, by = joinby, type = "inner")
+    xrange <- xlim(limitz[1:2])
+    yrange <- ylim(limitz[3:4])
+    ctr <- 1
+    N <- dim(snapshots)[2]
+    release <- max(as.numeric(parameters$y0))
+    max.dist <- release - 1.417
+    swing <- NULL
+    for (i in 1:(N - 1)) {
+        if (flag & ctr > (2/5) * N) 
+            swing <- annotate("text", label = "SWING!", x = 0, 
+                y = 6, size = 2, colour = "red")
+        frame <- data.frame(snapshots[, i, ], other)
+        names(frame) <- c("x", "y", "z", names(other))
+        Sys.sleep(1e-09)
+        frame$scale_y <- abs(frame$y - release)/max.dist
+        p <- ggplot(data = frame) + xrange + yrange + xlab("Horizontal Pitch Location") + 
+            ylab("Height from Ground") + scale_alpha(guide = "none") + 
+            scale_size(guide = "none", range = (ctr/N + 1) * 
+                c(2, 3)) + theme(legend.position = c(0.25, 0.05), 
+            legend.direction = "horizontal")
+        p <- p + geom_rect(mapping = aes(ymax = top, ymin = bottom, 
+            xmax = right, xmin = left), alpha = 0, fill = "pink", 
+            colour = "black")
+        p <- p + geom_point(mapping = aes_mapping, alpha = point.alpha, 
+            ...)
+        print(p + swing + layers)
+        ctr <- ctr + 1
+    }
+}
+<environment: namespace:pitchRx>

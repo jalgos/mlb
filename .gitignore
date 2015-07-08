@@ -1,0 +1,15 @@
+*~
+*\#*
+.hg*
+*.csv
+*.pdf
+*.tex
+*.aux
+*.toc
+*.log
+*.swp
+data
+logs
+summary
+.RData
+.Rhistory

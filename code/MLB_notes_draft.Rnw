@@ -1,0 +1,53 @@
+\documentclass{article}
+\usepackage{longtable}
+\begin{document}
+\SweaveOpts{concordance=TRUE}
+
+kpsewhich longtable
+
+\begin{landscape}
+\begin{l}
+
+\caption{Glossary of Pitch F/X fields by Mike Fast}
+
+  \begin{tabular*} {5\textwidth} {p{2.5cm}| p{25cm}}
+  
+  Field & Description\\
+  \hline
+  
+start\_speed & pitch speed, in miles per hour and in three dimensions, measured at the initial point, y0. Of the two speeds, this one is closer to the speed measured by a radar gun and what we are familiar with for a pitcher's "velocity" .\\
+
+end\_speed & pitch speed measured as it crossed the front of home plate.\\
+sz\_top & distance in feet from the ground to the top of the current batter's rulebook strike zone as measured from the video by the PITCHf/x operator. The operator sets a line at the batter's belt as he settles into the hitting position, and the PITCHf/x software adds four inches up for the top of the zone.\\
+sz\_bot & distance in feet from the ground to the bottom of the current batter's rulebook strike zone. The PITCHf/x operator sets a line at the hollow of the knee for the bottom of the zone.\\
+pfx\_x & horizontal movement, in inches, of the pitch between the release point and home plate, as compared to a theoretical pitch thrown at the same speed with no spin-induced movement. This parameter is measured at y=40 feet regardless of the y0 value.\\
+pfx\_z & vertical movement, in inches, of the pitch between the release point and home plate, as compared to a theoretical pitch thrown at the same speed with no spin-induced movement. This parameter is measured at y=40 feet regardless of the y0 value.\\
+px & left/right distance, in feet, of the pitch from the middle of the plate as it crossed home plate. The PITCHf/x coordinate system is oriented to the catcher's/umpire's perspective, with distances to the right being positive and to the left being negative.\\
+pz & height of the pitch in feet as it crossed the front of home plate.\\
+x0 & left/right distance, in feet, of the pitch, measured at the initial point.\\
+y0 & distance in feet from home plate where the PITCHf/x system is set to measure the initial parameters. This parameter has been variously set at 40, 50, or 55 feet (and in a few instances 45 feet) from the plate at different times throughout the 2007 season as Sportvision experiments with optimal settings for the PITCHf/x measurements. Sportvision settled on 50 feet in the second half of 2007, and this value of y0=50 feet has been used since. Changes in this parameter impact the values of all other parameters measured at the release point, such as start\_speed.\\
+z0 & height, in feet, of the pitch, measured at the initial point.\\
+vx0, vy0, vz0 & velocity of the pitch, in feet per second, in three dimensions, measured at the initial point.\\
+ax, ay, az & acceleration of the pitch, in feet per second per second, in three dimensions, measured at the initial point.\\
+break\_y & distance in feet from home plate to the point in the pitch trajectory where the pitch achieved its greatest deviation from the straight line path between the release point and the front of home plate.\\
+break\_angle & angle, in degrees, from vertical to the straight line path from the release point to where the pitch crossed the front of home plate, as seen from the catcher's/umpire's perspective.\\
+break\_length & measurement of the greatest distance, in inches, between the trajectory of the pitch at any point between the release point and the front of home plate, and the straight line path from the release point and the front of home plate, per the MLB Gameday team. John Walsh's article “In Search of the Sinker” has a good illustration of this parameter.\\
+
+
+sv\_id & a date/time stamp of when the PITCHf/x tracking system first detected the pitch in the air, it is in the format YYMMDD\_hhmmss.\\
+pitch\_type & most probable pitch type according to a neural net classification algorithm developed by Ross Paul of MLBAM.\\
+type\_confidence & value of the weight at the classification algorithm's output node corresponding to the most probable pitch type, this value is multiplied by a factor of 1.5 if the pitch is known by MLBAM to be part of the pitcher's repertoire\\
+
+zone & appears to correspond to the location of the pitch based on the boxes into which the Gameday app divides the strike zone for its hot/cold zone graphics\\
+nasty & The “nasty” field is presumably a crude attempt to calculate how hard to hit a particular pitch was, on a scale of 0-100. My initial cursory look at the data indicates that they are calculating the “nasty” factor mostly based on the location of the pitch, a linear calculation of how close it is to the edges and away from the heart of the zone. For the fastball, MLBAM does not appear to be including anything related to the movement or speed of the pitch into the “nasty” factor. For the curveball, they appear to be rating sweeping curveballs as significantly more nasty than 12-to-6 curveballs. Anyway, I’m not sure that any of this matters as more than a curiosity \\
+cc & comment field that appears to my[Mike Fast] highly-trained eye to be auto-generated, probably also based on the hot/cold zone information that MLBAM tracks \\
+
+
+
+  \end{tabular*}
+\end{landscape}
+
+\end{l}
+
+
+\end{document}
