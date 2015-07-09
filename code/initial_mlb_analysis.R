@@ -15,6 +15,7 @@ library(DBI)
 library(tidyr)
 library(ggplot2)
 library(animation)
+library(mclust)
 
 mlb_db <- src_sqlite("pitchRx.sqlite3")
 
@@ -41,6 +42,40 @@ pa_full14<- filter(tbl(mlb_db, 'pa_full'), date >= '2014_01_01' & date < '2015_0
 
 k13 <- filter(pa_full13, pitcher_name == 'Clayton Kershaw')
 kershaw13<-collect(k13)
+
+b13 <- collect(filter(pa_full13, pitcher_name == 'Mark Buehrle'))
+# Take only regular season games:
+buehrle13<- subset(b13, b13$date>"2013_04_01")
+buehrle13<- buehrle13[,c(1,4,7,8,10:31,34,35,42:46,52:54,57,72,75)]
+# Add pitch count:
+buehrle13$pitch_nbr <- unlist(sapply(rle(buehrle13$date)$lengths,seq))
+# First pass model based clustering:
+clust1 <- Mclust(buehrle13[,c(5, 22, 23, 24)])
+clust1BIC <- mclustBIC(buehrle13[,c(5, 22, 23, 24)])
+pdf("plots/Buerhle13_clust1_BIC.pdf")
+plot(clust1BIC)
+dev.off()
+# Attach cluster membership to data
+buehrle13$class1 <- clust1$class
+cProb <- data.frame(clust1$z)
+buehrle13 <- data.frame(cbind(buehrle13, cProb))
+head(buehrle13)
+
+# Plot clusters along variables used in analysis
+
+pdf("plots/Buerhle13_clust1_Proj.pdf", width=20)
+par(mfrow=c(1,3))
+coordProj(buehrle13[,c(5, 22, 23, 24)], dimens=c(1,3), what="classification", classification=clust1$classification, parameters=clust1$parameters)
+coordProj(buehrle13[,c(5, 22, 23, 24)], dimens=c(1,4), what="classification", classification=clust1$classification, parameters=clust1$parameters)
+coordProj(buehrle13[,c(5, 22, 23, 24)], dimens=c(3,4), what="classification", classification=clust1$classification, parameters=clust1$parameters)
+dev.off()
+
+# Compare to pitch_type as defined by Pitch F/X algorithm
+table(buehrle13$class1, buehrle13$pitch_type)
+
+# Look at Pitch F/X pitch type classification confidence 
+tapply(buehrle13$type_confidence, buehrle13$pitch_type, mean)
+
 
 saveHTML(
   animateFX(kershaw13, avg.by = 'pitch_types', layer = list(theme_bw(), facet_grid(.~stand))),
