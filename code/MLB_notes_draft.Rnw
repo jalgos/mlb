@@ -47,6 +47,11 @@ cc & comment field that appears to my[Mike Fast] highly-trained eye to be auto-g
   \end{tabular*}
 \end{landscape}
 
+Ideas for physical pitcher measures:
+
+- Release points (c.f. Mike Fast article on calculation method): consistency within games & accross games (clustered by pitch type?), location by pitch type
+
+
 \end{l}
 
 
